@@ -13,7 +13,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "preconstruct build",
+    "postinstall": "husky install && preconstruct dev",
     "build": "preconstruct build",
     "watch": "preconstruct watch",
     "dev": "preconstruct dev",
