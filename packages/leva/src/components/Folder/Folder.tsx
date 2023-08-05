@@ -29,7 +29,11 @@ const Folder = ({ name, path, tree }: FolderProps) => {
 
   return (
     <StyledFolder ref={folderRef}>
-      <FolderTitle name={name!} toggled={toggled} toggle={() => setToggle((t) => !t)} />
+      <FolderTitle
+        name={name.includes('[BKY_BLOCK_ID]') ? 'Properties' : name!}
+        toggled={toggled}
+        toggle={() => setToggle((t) => !t)}
+      />
       <TreeWrapper parent={newPath} tree={tree} toggled={toggled} />
     </StyledFolder>
   )
